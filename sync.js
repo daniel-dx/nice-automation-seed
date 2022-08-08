@@ -3,13 +3,14 @@ const _ = require("lodash");
 const fs = require("fs-extra");
 const path = require("path");
 const docConfig = require("./docconfig.json");
+const docCookie = require("./.doccookie.json");
 const existCases = require("./case.json");
 
 async function fetchDocData() {
   const getApi = getGetApi();
   let res = await axios.get(getApi, {
     headers: {
-      cookie: docConfig.cookie,
+      cookie: docCookie.cookie,
     },
   });
   const downloadUrl = _.get(
@@ -155,7 +156,8 @@ async function main() {
 }
 
 function getGetApi() {
-  const { doc_url, cookie } = docConfig;
+  const { cookie } = docCookie;
+  const { doc_url } = docConfig;
   const [, tok] = cookie.match(/TOK=(.*?);/);
   const [, id, urlQuery] = doc_url.match(/^.*\/([^\/]*?)\?(.*)$/);
   return `https://doc.weixin.qq.com/dop-api/mind/data/get?id=${id}&normal=1&xsrf=${tok}&${urlQuery}`;
