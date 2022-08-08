@@ -194,11 +194,19 @@ $ npm run test:production
 ```sh
 $ npm run record-before -- <login url>
 ```
+或
+```sh
+$ yarn run record-before <login url>
+```
 
 2. 运行以下命令进行录制
 
 ```sh
 $ npm run record -- <url>
+```
+或
+```sh
+$ yarn run record <url>
 ```
 
 ### 一些最佳实践
