@@ -1,0 +1,26 @@
+{
+  "name": "weapps-site-automation",
+  "version": "0.1.0",
+  "main": "sync.js",
+  "repository": "https://git.woa.com/ttools/weapps-site-automation.git",
+  "author": "Daniel.xiao <dxweixiao@tencent.com>",
+  "scripts": {
+    "test:debug": "GLOBAL_LOGIN=0 NODE_ENV=dev npm run test:dev",
+    "test:dev": "NODE_ENV=dev playwright test",
+    "test:test": "NODE_ENV=test playwright test",
+    "test:production": "NODE_ENV=production playwright test",
+    "record-before": "playwright codegen --save-storage=auth.json http://dev.weapps.woa.com/user/login",
+    "record": "playwright codegen --load-storage=auth.json http://dev.weapps.woa.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.12.2",
+    "playwright": "^1.12.2"
+  },
+  "dependencies": {
+    "@danieldx/jasmine-xml2html-converter": "^0.1.2",
+    "axios": "^0.21.1",
+    "fs-extra": "^10.0.0",
+    "lodash": "^4.17.21"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "parent": "root",
+    "children": [
+      {
+        "parent": "56f902795706",
+        "children": [
+          {
+            "parent": "94b58acee3c8",
+            "children": [],
+            "id": "b387898ac9dc",
+            "title": "期望：显示“蛋先生dx”相关搜索记录"
+          }
+        ],
+        "id": "94b58acee3c8",
+        "title": "搜索“蛋先生dx”"
+      }
+    ],
+    "id": "56f902795706",
+    "title": "搜索:search"
+  }
+]

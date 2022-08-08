@@ -1,0 +1,10 @@
+node_modules
+auth.json
+state.json
+.history
+doccookie.json
+test-results
+local-env.js
+.DS_Store
+report/results.xml
+report/report.html
