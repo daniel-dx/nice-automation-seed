@@ -14,8 +14,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.12.2",
-    "playwright": "^1.12.2"
+    "@playwright/test": "^1.24.2",
+    "playwright": "^1.24.2"
   },
   "dependencies": {
     "@danieldx/jasmine-xml2html-converter": "^0.1.2",
