@@ -1,8 +1,8 @@
 {
-  "name": "weapps-site-automation",
+  "name": "nice-automation",
   "version": "0.1.0",
   "main": "sync.js",
-  "repository": "https://git.woa.com/ttools/weapps-site-automation.git",
+  "repository": "https://github.com/daniel-dx/nice-automation-seed.git",
   "author": "Daniel.xiao <dxweixiao@tencent.com>",
   "scripts": {
     "test:debug": "GLOBAL_LOGIN=0 NODE_ENV=dev npm run test:dev",
