@@ -7,7 +7,6 @@ test.use({ storageState: "state.json" });
 test.describe('搜索', () => {
   test.beforeEach(async ({ page }) => {
     utils.extendPage(page);
-    // await page.gotoWeda("/admin/project");
   });
   
   // id:94b58acee3c8

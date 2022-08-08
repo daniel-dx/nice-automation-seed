@@ -80,7 +80,7 @@ $ node sync.js
        如点击搜索，需要等待异步请求完成并且列表数据更新才能进行断言操作。示例如下：
 
        ```js
-       await page.fill('[placeholder="搜索项目"]', "自动化weda");
+       await page.fill('[placeholder="搜索项目"]', "自动化");
        await page.click("button");
        await page.waitReqAndUI();
        ```
