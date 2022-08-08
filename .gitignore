@@ -2,8 +2,8 @@ node_modules
 auth.json
 state.json
 .history
-docconfig.json
 test-results
+.doccookie.json
 local-env.js
 .DS_Store
 report/results.xml

@@ -8,7 +8,7 @@
 > **务必：**  
 > 根据 [【测试用例编写流程】](#测试用例编写流程)来编写测试用例自动化代码
 
-## 初始工作
+## 初始化
 
 1. 依赖安装
 
@@ -16,20 +16,27 @@
 $ yarn install
 ```
 
-2. 创建 docconfig.json 文件
+2. 获取测试用例文档链接
 
-在根目录创建 `docconfig.json` 文件，将文档链接和登录腾讯文档后的 cookie 粘贴过来，内容如下：
+> 如果 docconfig.json 已存在数据则忽略
+
+打开 [平台测试用例模板](https://doc.weixin.qq.com/mind/m3_AAQAnAa_ACksHFfg60qRIyRzFj0Pk?scode=AJEAIQdfAAo3NMGDQhAAQAnAa_ACk)，点击【生成副本】，将副本的链接填写在 docconfig.json 文件中
+
+```json
+{
+  "doc_url": "...",
+}
+```
+
+3. 创建 .doccookie.json 文件
+
+在根目录创建 `.doccookie.json` 文件，将登录腾讯文档后的 cookie 粘贴过来，内容如下：
 
 ```json
 {
   "cookie": "...",
-  "doc_url": "https://doc.weixin.qq.com/mind/xxx?scode=xxx"
 }
 ```
-
-3. 创建测试用例文档
-
-打开 [平台测试用例模板](https://doc.weixin.qq.com/mind/m3_AAQAnAa_ACksHFfg60qRIyRzFj0Pk?scode=AJEAIQdfAAo3NMGDQhAAQAnAa_ACk)，点击【生成副本】，即可得到文档的链接
 
 4. 创建 local-env.js 文件
 
@@ -185,13 +192,13 @@ $ npm run test:production
 1. 运行打开浏览器，登录，关闭（这一步为了保留登录状态，只需执行一次）
 
 ```sh
-$ npm run record-before
+$ npm run record-before -- <login url>
 ```
 
 2. 运行以下命令进行录制
 
 ```sh
-$ npm run record
+$ npm run record -- <url>
 ```
 
 ### 一些最佳实践

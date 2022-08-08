@@ -9,8 +9,8 @@
     "test:dev": "NODE_ENV=dev playwright test",
     "test:test": "NODE_ENV=test playwright test",
     "test:production": "NODE_ENV=production playwright test",
-    "record-before": "playwright codegen --save-storage=auth.json http://dev.weapps.woa.com/user/login",
-    "record": "playwright codegen --load-storage=auth.json http://dev.weapps.woa.com/"
+    "record-before": "playwright codegen --save-storage=auth.json",
+    "record": "playwright codegen --load-storage=auth.json"
   },
   "license": "MIT",
   "devDependencies": {
